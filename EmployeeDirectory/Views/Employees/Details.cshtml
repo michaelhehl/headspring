@@ -1,0 +1,105 @@
+﻿@model EmployeeDirectory.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstname)  @Html.DisplayFor(model => model.middleinitial) @Html.DisplayFor(model => model.lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title.titlename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title.titlename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.departmentname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.departmentname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailaddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailaddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telephonenumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telephonenumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.streetaddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.streetaddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zipcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zipcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.countryfull)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.countryfull)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.locationname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.locationname)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.employeeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

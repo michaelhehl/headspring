@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeeDirectoryModelStoreContainer" CdmEntityContainer="EmployeeDirectoryEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="EmployeeDirectoryModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="departmentID" ColumnName="departmentID" />
+          <ScalarProperty Name="departmentname" ColumnName="departmentname" />
+          <ScalarProperty Name="departmenthead" ColumnName="departmenthead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EmployeeDirectoryModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="locationID" ColumnName="locationID" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="titleID" ColumnName="titleID" />
+          <ScalarProperty Name="departmentID" ColumnName="departmentID" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="streetaddress" ColumnName="streetaddress" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="countryfull" ColumnName="countryfull" />
+          <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+          <ScalarProperty Name="telephonenumber" ColumnName="telephonenumber" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middleinitial" ColumnName="middleinitial" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="imagelocation" ColumnName="imagelocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="EmployeeDirectoryModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="locationID" ColumnName="locationID" />
+          <ScalarProperty Name="locationname" ColumnName="locationname" />
+          <ScalarProperty Name="locationaddress" ColumnName="locationaddress" />
+          <ScalarProperty Name="locationcity" ColumnName="locationcity" />
+          <ScalarProperty Name="locationzipcode" ColumnName="locationzipcode" />
+          <ScalarProperty Name="locationState" ColumnName="locationState" />
+          <ScalarProperty Name="locationcountry" ColumnName="locationcountry" />
+          <ScalarProperty Name="locationphone" ColumnName="locationphone" />
+          <ScalarProperty Name="locationweb" ColumnName="locationweb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titles">
+      <EntityTypeMapping TypeName="EmployeeDirectoryModel.Title">
+        <MappingFragment StoreEntitySet="Title">
+          <ScalarProperty Name="titleID" ColumnName="titleID" />
+          <ScalarProperty Name="titlename" ColumnName="titlename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

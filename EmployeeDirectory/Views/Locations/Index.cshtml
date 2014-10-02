@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EmployeeDirectory.Models.Location>
+
+@{
+    ViewBag.Title = "Locations";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.locationname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locationcity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locationState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locationphone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locationweb)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationcity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationphone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationweb)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.locationID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.locationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.locationID })
+        </td>
+    </tr>
+}
+
+</table>
