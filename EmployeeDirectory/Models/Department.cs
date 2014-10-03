@@ -19,12 +19,9 @@ namespace EmployeeDirectory.Models
         {
             this.Employees = new HashSet<Employee>();
         }
-
         [Display(Name = "Department")]
         public int departmentID { get; set; }
-        [Display(Name = "Department")]
         public string departmentname { get; set; }
-        [Display(Name = "Department Head")]
         public int departmenthead { get; set; }
     
         public virtual ICollection<Employee> Employees { get; set; }

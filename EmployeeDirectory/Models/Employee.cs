@@ -16,37 +16,47 @@ namespace EmployeeDirectory.Models
     public partial class Employee
     {
         public int employeeID { get; set; }
-        [Display(Name = "Location")]
         public int locationID { get; set; }
-        public int roleID { get; set; }
+        public Nullable<int> roleID { get; set; }
         [Display(Name = "Title")]
         public int titleID { get; set; }
         [Display(Name = "Department")]
         public int departmentID { get; set; }
         [Display(Name = "Gender")]
         public string gender { get; set; }
-        [Display(Name = "Street Address")]
+        [Required(ErrorMessage = "Address is required")]
+        [Display(Name = "Adress")]
         public string streetaddress { get; set; }
+        [Required(ErrorMessage = "City is required")]
         [Display(Name = "City")]
         public string city { get; set; }
+        [Required(ErrorMessage = "State is required")]
         [Display(Name = "State")]
         public string state { get; set; }
+        [Required(ErrorMessage = "Postal Code is required")]
         [Display(Name = "Postal Code")]
         public string zipcode { get; set; }
+        [Required(ErrorMessage = "Country is required")]
         [Display(Name = "Country")]
         public string countryfull { get; set; }
+        [Required(ErrorMessage = "Email address is required")]
         [Display(Name = "Email")]
         public string emailaddress { get; set; }
-        [Display(Name = "Phone Number")]
+        [Required(ErrorMessage = "Phone is required")]
+        [Display(Name = "Phone")]
         public string telephonenumber { get; set; }
+        [Required(ErrorMessage = "Birthday is required")]
         [Display(Name = "Birthday")]
         public string birthday { get; set; }
-        [Display(Name = "First Name")]
+        [Required(ErrorMessage = "First name is required")]
+        [Display(Name="First Name")]
         public string firstname { get; set; }
-        [Display(Name = "Middle Initial")]
+        [Display(Name = "Middle initial")]
         public string middleinitial { get; set; }
+        [Required(ErrorMessage = "Last name is required")]
         [Display(Name = "Last Name")]
         public string lastname { get; set; }
+        [Display(Name = "Image")]
         public string imagelocation { get; set; }
     
         public virtual Department Department { get; set; }

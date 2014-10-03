@@ -121,9 +121,17 @@ namespace EmployeeDirectory.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Add(employee);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.Employees.Add(employee);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
             }
 
             ViewBag.departmentID = new SelectList(db.Departments, "departmentID", "departmentname", employee.departmentID);

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EmployeeDirectoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EmployeeDirectoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Department">
           <Key>
             <PropertyRef Name="departmentID" />
@@ -19,10 +19,10 @@
           </Key>
           <Property Name="employeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="locationID" Type="int" Nullable="false" />
-          <Property Name="roleID" Type="int" Nullable="false" />
+          <Property Name="roleID" Type="int" />
           <Property Name="titleID" Type="int" Nullable="false" />
           <Property Name="departmentID" Type="int" Nullable="false" />
-          <Property Name="gender" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="gender" Type="varchar" MaxLength="6" />
           <Property Name="streetaddress" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="city" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="state" Type="varchar" MaxLength="22" Nullable="false" />
@@ -34,7 +34,7 @@
           <Property Name="firstname" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="middleinitial" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="lastname" Type="varchar" MaxLength="23" Nullable="false" />
-          <Property Name="imagelocation" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="imagelocation" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Location">
           <Key>
@@ -117,8 +117,7 @@
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EmployeeDirectoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -137,10 +136,10 @@
           </Key>
           <Property Name="employeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="locationID" Type="Int32" Nullable="false" />
-          <Property Name="roleID" Type="Int32" Nullable="false" />
+          <Property Name="roleID" Type="Int32" />
           <Property Name="titleID" Type="Int32" Nullable="false" />
           <Property Name="departmentID" Type="Int32" Nullable="false" />
-          <Property Name="gender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="streetaddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="state" Type="String" MaxLength="22" FixedLength="false" Unicode="false" Nullable="false" />
@@ -152,7 +151,7 @@
           <Property Name="firstname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="middleinitial" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="lastname" Type="String" MaxLength="23" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="imagelocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="imagelocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Department" Relationship="Self.FK_dbo_Department_departmentID" FromRole="Employee" ToRole="Department" />
           <NavigationProperty Name="Location" Relationship="Self.FK_dbo_Location_locationID" FromRole="Employee" ToRole="Location" />
           <NavigationProperty Name="Title" Relationship="Self.FK_dbo_Title_titleID" FromRole="Employee" ToRole="Title" />

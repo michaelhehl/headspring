@@ -14,10 +14,10 @@
     </Key>
     <Property Name="employeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="locationID" Type="int" Nullable="false" />
-    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="roleID" Type="int" />
     <Property Name="titleID" Type="int" Nullable="false" />
     <Property Name="departmentID" Type="int" Nullable="false" />
-    <Property Name="gender" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="6" />
     <Property Name="streetaddress" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="city" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="state" Type="varchar" MaxLength="22" Nullable="false" />
@@ -29,7 +29,7 @@
     <Property Name="firstname" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="middleinitial" Type="varchar" MaxLength="1" Nullable="false" />
     <Property Name="lastname" Type="varchar" MaxLength="23" Nullable="false" />
-    <Property Name="imagelocation" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="imagelocation" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Location">
     <Key>

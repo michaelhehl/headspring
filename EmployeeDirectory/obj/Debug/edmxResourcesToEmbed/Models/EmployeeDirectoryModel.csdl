@@ -15,10 +15,10 @@
     </Key>
     <Property Name="employeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="locationID" Type="Int32" Nullable="false" />
-    <Property Name="roleID" Type="Int32" Nullable="false" />
+    <Property Name="roleID" Type="Int32" />
     <Property Name="titleID" Type="Int32" Nullable="false" />
     <Property Name="departmentID" Type="Int32" Nullable="false" />
-    <Property Name="gender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
     <Property Name="streetaddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="state" Type="String" MaxLength="22" FixedLength="false" Unicode="false" Nullable="false" />
@@ -30,7 +30,7 @@
     <Property Name="firstname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="middleinitial" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="lastname" Type="String" MaxLength="23" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="imagelocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="imagelocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Department" Relationship="Self.FK_dbo_Department_departmentID" FromRole="Employee" ToRole="Department" />
     <NavigationProperty Name="Location" Relationship="Self.FK_dbo_Location_locationID" FromRole="Employee" ToRole="Location" />
     <NavigationProperty Name="Title" Relationship="Self.FK_dbo_Title_titleID" FromRole="Employee" ToRole="Title" />
